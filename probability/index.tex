@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\textbf{Proposition:} If $A$ and $B$ are events such that $A \subseteq B$, then $P(A) \leq P(B)$.
+
+\textbf{Proof:}
+
+Let $A$, $B$ be events with $A \subseteq B$. Then,
+
+\begin{equation*}
+B=A \cup (B \cap A^c)
+\end{equation*}
+
+Since $A$ and $B \cap A^c$ are mutually exclusive, it follows that
+
+\begin{align*}
+P(B) &= P(A \cup (B \cap A^c)) \\
+&= P(A) + P(B \cap A^c) \\
+\end{align*}
+
+We know that $P(B \cap A^c) \geq 0$. Hence,
+by adding $P(A)$ on both sides, we obtain $P(B) \geq P(A)$.
+
+Therefore, if $A \subseteq B$, then $P(A) \leq P(B)$.
+
+\end{document}
