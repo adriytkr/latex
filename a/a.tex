@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+
+\begin{document}
+\begin{definition}
+\label{def:perfect-square}
+An integer $n$ is a perfect square if and only if $n=k^2$ for some $k \in \mathbb{Z}$.
+\end{definition}
+
+\begin{proposition}
+$\forall n \in \mathbb{Z}$, $4(n^2+n+1)-3n^2$ is a perfect square.
+\end{proposition}
+
+\begin{proof}
+Let $n \in \mathbb{Z}$, and $m=4(n^2+n+1)-3n^2$. Then
+\begin{align*}
+m&=4(n^2+n+1)-3n^2\\
+&=4n^2+4n+4-3n^2\\
+&=n^2+4n+4\\
+&=(n+2)^2
+\end{align*}
+
+Therefore, by definition of a perfect square (Definition \ref{def:perfect-square}),
+$4(n^2+n+1)-3n^2$ is a perfect square.
+\end{proof}
+\end{document}
