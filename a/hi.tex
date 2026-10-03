@@ -1,0 +1,23 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\textbf{Proposition:} If a sum of two integers is even, then one of the summands is even.
+
+\textbf{Proof:} Let $r=a+b$ be the sum of two integers $a$ and $b$.
+
+Choose $a$ and $b$ to be odd. Then, $a=2m+1$ and $b=2n+1$ for some integers $m$ and $n$. So,
+
+\begin{align*}
+r&=a+b\\
+&=(2m+1)+(2n+1)\\
+&=2m+2n+2\\
+&=2(m+n+1)
+\end{align*}
+
+Thus, $r$ is even. Therefore, we found integers, namely $a$ and $b$, such that
+their sum is even, but neither of them is even. This contradicts the proposition
+which states that at least of the summands must be even. Hence, the proposition is false.
+
+\end{document}
