@@ -1,0 +1,21 @@
+\documentclass{article}
+\usepackage{amsmath,amsthm,amssymb}
+
+\newtheorem{proposition}{Proposition}
+
+\begin{document}
+\begin{proposition}
+Prove the language $\{0^n1^n2^n|n\ge0\}$ is nonregular.
+\end{proposition}
+
+\begin{proof}
+Let $A=\{0^n1^n2^n|n\ge0\}$. Assume, for the sake of contradiction, $A$ is regular.
+Then, by the Pumping Lemma, there exists a pumping length $p$. Let $w=0^p1^p2^p$. Then,
+$w \in A$, and $|w| \ge p$. By the Pumping Lemma, there exist strings $x$, $y$, and $z$
+such that $w=xyz$. Also, recall that $s=xy^iz \in A$ for every integer $i \ge 0$.
+Since, by the Pumping Lemma, $|xy| \le p$, $y$ contains only 0's. Furthermore,
+since $|y| \ge 0$, $y$ contains at least one zero. By choosing $i=0$, we obtain
+$s=xy^0z=xz$. Hence, by removing $y$, $s$ will contain fewer 0's and same number
+of 1's and 2's. Therefore, $s \notin A$, and, by contradiction, $A$ is nonregular.
+\end{proof}
+\end{document}

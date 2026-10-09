@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage{amsmath,amsthm,amssymb}
+
+\newtheorem{proposition}{Proposition}
+
+\begin{document}
+\begin{proposition}
+Prove the language $\{a^{2^n}|n \ge 0\}$ is nonregular.
+\end{proposition}
+
+\begin{proof}
+Let $A=\{a^{2^n}|n\ge0\}$. Assume, for the sake of contradiction,
+$A$ is regular. Then, there exists a pumping length $p$.
+
+Let
+$w=a^{2^p}$. Then, $w \in A$, and $|w|=2^p \ge p$. By the Pumping
+Lemma, there exists strings $x$, $y$, and $z$ such that $w=xyz$. Furthermore, $xy^iz \in A$ for every integer $i \ge 0$.
+
+Let $|y|=c$. Recall that, by the Pumping Lemma, $|y|>0$. So,
+\begin{equation}
+\label{ine}
+0 < c \le 2^p
+\end{equation}
+
+Note that
+\begin{align*}
+|xyyz|&=|xyz|+|y|\\
+&=2^p+c
+\end{align*}
+
+By inequality (\ref{ine}), we have
+\begin{equation}
+\label{ine2}
+2^p < 2^p+c \le 2^{p+1}
+\end{equation}
+
+Since $xyyz \in A$, $|xyyz|$ is a power of 2. By inequality (\ref{ine2}),
+we have $c=2^p$.
+
+Now consider
+\begin{align*}
+|xyyyz|&=|xyz|+|y|+|y|\\
+&=2^p+2c\\
+&=2^p+2 \cdot 2^p\\
+&=3 \cdot 2^p
+\end{align*}
+
+Since $|xyyyz|$ is not a power of 2, it follows that $xyyyz \notin A$. This contradicts
+the Pumping Lemma. Hence, we can conclude $A$ is nonregular.
+\end{proof}
+\end{document}

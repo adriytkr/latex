@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage{amsthm,amssymb}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+
+\begin{document}
+\begin{definition}
+\label{def:rational-number}
+A real number $r$ is rational if, and only if, $r=\frac{a}{b}$ for some integers $a,b$.
+\end{definition}
+
+\begin{proposition}
+The sum of any two rational numbers is rational.
+\end{proposition}
+
+\begin{proof}
+Let $a,b \in \mathbb{Q}$. Observe that $a+b$ is integer. Now,
+
+\[
+a+b=\frac{a+b}{1}
+\]
+
+Since $a+b$ can be expressed as a ratio of two integers, namely $a+b$ and $1$, by
+definition of a rational number (Definition \ref{def:rational-number}),
+$a+b$ is rational.
+\end{proof}
+\end{document}
