@@ -1,0 +1,21 @@
+\documentclass{article}
+\usepackage{amsmath,amsthm}
+
+\newtheorem{problem}{Problem}
+
+\begin{document}
+\begin{problem}
+Prove $n!+2$ is divisible by $2$ for every integer $n \ge 2$.
+\end{problem}
+
+\begin{proof}
+Let $n$ be an integer with $n \ge 2$. Then
+
+\begin{align*}
+n!+2&=n(n-1)\cdots2\cdot1+2\\
+&=2(n(n+1)\cdots3+1)
+\end{align*}
+
+Since $n!+2$ has a factor of 2, $n!+2$ is divisible by $2$.
+\end{proof}
+\end{document}
