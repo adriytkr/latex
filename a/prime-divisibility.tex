@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage{amsmath,amsthm}
+
+\newtheorem{proposition}{Proposition}
+
+\begin{document}
+\begin{proposition}
+Any integer greater than $1$ is divisible by a prime number.
+\end{proposition}
+
+\begin{proof}
+Let $P(n)$: "$p|n$" where $p$ is prime and $n \ge 2$.
+
+\textbf{Base Step:} $n=2$
+
+$2$ is divisible by $2$, which is a prime number. Thus,
+P(2) holds.
+
+\textbf{Inductive Step:}
+
+Suppose $P(i)$ is true for every integer $i$ from $2$ through $k$.
+
+\textbf{Case $k+1$ is prime:}
+
+Then, $k+1$ is divibible by $k+1$, which is prime.
+
+\textbf{Case $k+1$ is not prime:}
+
+Then, $k+1=ab$ for some integers $a$, $b$ with $1<a<k+1$ and
+$1<b<k+1$. Thus, P(a) and P(b) are true. Then, $a=p_ak_a$ for
+some prime number $p_a$ and integer $k_a$. Hence,
+
+\begin{align*}
+k+1&=ab\\
+&=p_ak_ab\\
+&=p_a(k_ab)
+\end{align*}
+
+Hence, $k+1$ is divisible by a prime number, namely $p_a$.
+
+In both cases, $P(k+1)$ holds. Therefore, any integer greater than $1$
+is divisible by a prime number.
+
+\end{proof}
+\end{document}
