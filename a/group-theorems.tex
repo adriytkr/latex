@@ -1,0 +1,90 @@
+\documentclass{article}
+\usepackage{amsthm,amsmath}
+
+\newtheorem{theorem}{Theorem}
+
+\begin{document}
+\begin{theorem}
+Is it possible for a group to have two distinct identity elements?
+\end{theorem}
+
+\begin{proof}
+Let $G$ be a group with the operation $*$. Suppose $e_1$ and $e_2$ are two
+identity elements for $G$ with $e_1 \neq e_2$.
+
+Since $e_1$ is an identity element, we have
+\begin{gather*}
+x*e_1=x \quad \text{and} \quad e_1*x=x
+\end{gather*}
+for all $x \in G$. Since $e_2 \in G$, we have $e_1*e_2=e_1$.
+
+Similarly, since $e_2$ is an identity element, we have
+$e_1*e_2=e_2$.
+
+Thus, $e_1=e_2$. Hence, every group has a single identity element.
+\end{proof}
+
+\begin{theorem}
+If $G$ is a group, and $a,b,c \in G$, then
+\begin{align*}
+\tag{i} ab=ac \quad &\text{implies} \quad b=c \quad \text{and}\\
+\tag{ii} ba=ca \quad &\text{implies} \quad b=c
+\end{align*}
+\end{theorem}
+
+\begin{proof}
+Let $G$ be a group, and $a,b,c \in G$.
+
+Now, suppose
+
+\begin{equation}
+\label{prob2:main}
+ab=ac
+\end{equation}
+
+By left-multiplying \eqref{prob2:main} by $a^{-1}$, we obtain
+$a^{-1}(ab)=a^{-1}(ac)$
+
+Since $G$ is a group, by associative property, we have
+\begin{align*}
+(a^{-1}a)b&=(a^{-1}a)c\\
+eb&=ec\\
+b&=c
+\end{align*}
+
+The other case, namely $ba=ca$, follows analogously by
+right-multiplying both sides by $a^{-1}$.
+\end{proof}
+
+\begin{theorem}
+If $G$ is a group, and $a,b \in G$, then
+\begin{align*}
+\tag{i} (ab)^{-1}&=b^{-1}a^{-1} \quad \text{and}\\
+\tag{ii} (a^{-1})^{-1}&=a
+\end{align*}
+
+\begin{proof}
+Let $G$ be a group, and let $a,b \in G$.
+
+(i) Since $ab \in G$, we have
+\begin{align*}
+(ab)(ab)^{-1}&=e\\
+a^{-1}(ab)(ab)^{-1}&=a^{-1}e\\
+(a^{-1}a)(b)(ab)^{-1}&=a^{-1}\\
+b(ab)^{-1}&=a^{-1}\\
+b^{-1}(b(ab)^{-1})&=b^{-1}a^{-1}\\
+(b^{-1}b)(ab)^{-1}&=b^{-1}a^{-1}\\
+(ab)^{-1}&=b^{-1}a^{-1}
+\end{align*}
+
+(ii) Since $(a^{-1})^{-1} \in G$, we have
+
+\begin{align*}
+a^{-1}(a^{-1})^{-1}&=e\\
+a(a^{-1}(a^{-1})^{-1}&)=ae\\
+(aa^{-1})(a^{-1})^{-1}&=a\\
+(a^{-1})^{-1}&=a
+\end{align*}
+\end{proof}
+\end{theorem}
+\end{document}
