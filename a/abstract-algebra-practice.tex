@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage{amsthm,amsmath,cancel}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+
+\begin{document}
+\begin{definition}
+Let $G$ be a group, and let $a,b \in G$. $a$ and $b$ are said to commute
+if, and only if, $ab=ba$.
+\end{definition}
+
+\begin{theorem}
+Let $G$ be a group, and let $a,b \in G$. If $a$ and $b$ commute, then
+$a^{-1}$ and $b^{-1}$ commute.
+\end{theorem}
+
+\begin{proof}
+Let $a,b \in G$ where $G$ is a group. Suppose $a$ and $b$ commute. Then,
+\begin{align*}
+ ab&=ba\\
+a^{-1}(ab)a^{-1}&=a^{-1}(ba)a^{-1}\\
+ba^{-1}&=a^{-1}b\\
+b^{-1}(ba^{-1})b^{-1}&=b^{-1}(a^{-1}b)b^{-1}\\
+a^{-1}b^{-1}&=b^{-1}a^{-1}
+\end{align*}
+
+Thus, $a^{-1}$ and $b^{-1}$ commute.
+\end{proof}
+\end{document}

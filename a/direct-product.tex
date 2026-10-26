@@ -1,0 +1,115 @@
+\documentclass{article}
+\usepackage{amsthm,amsmath}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+
+\begin{document}
+\begin{definition}
+Let $G$ and $H$ be groups with operations $+_G$ and $+_H$, respectively
+For convenience, we shall use $+$ to denote either operation when
+the intended operation is clear from context.
+
+The direct product of $G$ and $H$,
+denoted by $G \times H$, consists of all ordered pairs $(x,y)$
+where $x \in G$ and $y \in H$. In other words,
+\[
+G \times H = \{(x,y) \mid x \in G \quad \text{and} \quad y \in H\}
+\]
+
+Also, let $+$ denote the operation of $G \times H$ as follows:
+\[
+(x,y) + (x',y') = (x+x',y+y')
+\]
+where $(x,y),(x',y') \in G \times H$.
+\end{definition}
+
+\begin{theorem}
+If $G$ and $H$ are abelian groups, then $G \times H$ is also
+an abelian group.
+\end{theorem}
+
+\begin{proof}
+Let $G$ and $H$ be abelian groups, and let
+$(x,y),(x',y'),(x'',y'') \in G \times H$.
+
+\textbf{Commutativity:} 
+\begin{align*}
+(x,y)+(x',y')&=(x+x',y+y')\\
+&=(x'+x,y'+y)\\
+&=(x',y')+(x,y)
+\end{align*}
+
+Since $(x,y)+(x',y')=(x',y')+(x,y)$, it follows that
+$G \times H$ is commutative.
+
+\textbf{Associativity:}
+\begin{align*}
+(x,y)+((x',y')+(x'',y''))&=(x,y)+(x'+x'',y'+y'')\\
+&=(x+(x'+x''),y+(y'+y''))\\
+&=((x+x')+x'',(y+y')+y'')\\
+&=((x,y)+(x',y'))+(x'',y'')
+\end{align*}
+
+Hence, $G \times H$ is associative.
+
+\textbf{Identity:}
+
+Let $(a,b) \in G \times H$. Consider the following equation
+\[
+(x,y)+(a,b)=(x,y)
+\]
+
+We have $(x+a,y+b)=(x,y)$. Hence,
+\[
+\begin{cases}
+x+a=x\\
+y+b=y
+\end{cases}
+\]
+
+From the first equation, by adding $-x$ on both sides, we obtain
+\begin{align*}
+(x+a)+(-x)&=x+(-x)\\
+a+(x+(-x))&=e_G\\
+a+e_G&=e_G\\
+a&=e_G
+\end{align*}
+where $e_G$ is the identity of $G$.
+
+Similarly, from the second equation, we obtain $b=e_H$ where $e_H$
+is the identity of $H$.
+
+Now,
+\begin{align*}
+(x,y)+(e_G,e_H)&=(x+e_G,y+e_H)\\
+&=(x,y)
+\end{align*}
+
+Since $G \times H$ is commutative, we also have
+$(e_G,e_H)+(x,y)=(x,y)$
+
+Hence, $G \times H$ has an identity element, namely $(e_G,e_H)$.
+
+\textbf{Inverse:}
+Let $(a,b) \in G \times H$. Consider the following equation
+\[
+(x,y)+(a,b)=(e_G,e_H)
+\]
+
+We have $x+a=e_G$. Hence, $a=-x$. Similarly, $b=-y$.
+
+Now,
+\begin{align*}
+(x,y)+(-x,-y)&=(x+(-x),y+(-y))\\
+&=(e_G,e_H)
+\end{align*}
+
+Since $G \times H$ is commutative, it is also the case that
+$(-x,-y)+(x,y)=(e_G,e_H)$.
+
+Furthermore, since $(e_G,e_H)$ is the identity of $G \times H$, it follows
+that $(x,y)$ has an inverse, namely $(-x,-y)$.
+
+Therefore, $G \times H$ is an abelian group.
+\end{proof}
+\end{document}
