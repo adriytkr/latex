@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage{amsmath,amsthm}
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\begin{theorem}
+If $f$ and $g$ are injective functions, then $g \circ f$ is injective.
+\end{theorem}
+\begin{proof}
+Let $f$ and $g$ be injective functions. We need to show $g \circ f$ is injective.
+Equivalently, if $(g \circ f)(x)=(g \circ f)(y)$, then $x=y$.
+
+Suppose $g(f(x))=g(f(y))$. Since $g$ is injective, we have $f(x)=f(y)$.
+
+Since $f$ is injective, we have $x=y$. Therefore, $g \circ f$ is injective.
+\end{proof}
+\begin{theorem}
+If $f$ and $g$ are surjective functions, then $g \circ f$ is surjective.
+\end{theorem}
+\begin{proof}
+Let $f: A \rightarrow B$ and $g: B \rightarrow C$ be surjective functions.
+We need to show $g \circ f$ is surjective. In other words,
+for every element $c \in C$, we have $c=g(f(a))$ for some $a \in A$.
+
+Let $c \in C$. Then, since $g$ is surjective, we have $c=g(b)$ for some $b \in B$.
+
+Since $f$ is surjective, we have $b=f(a)$ for some $a \in A$.
+
+Hence, $c=g(f(a))$. Therefore, $g \circ f$ is surjective.
+\end{proof}
+\end{document}
