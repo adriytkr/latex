@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage{amsmath,amsthm}
+\begin{document}
+\paragraph{Problem.} Let $G$ be an abelian group, let $H \le G$, and
+let $K=\{x \in G \mid x^n \in $H$ \text{ for some positive integer } $n$\}$.
+Prove $K \le G$
+\begin{proof}
+(i) Let $x,y \in K$. Then, $x^m \in H$ and $x^n \in H$ for some positive
+integers $m$ and $n$.
+
+We need to show $xy \in K$; that is, $(xy)^k \in H$ for
+some positive integer $k$.
+
+Observe that $(x^m)^n \in H$ and $(y^n)^m \in H$. In other words,
+$x^{mn} \in H$ and $y^{mn} \in H$.
+
+Since $G$ is commutative, we have $x^{mn}y^{mn}=(xy)^{mn} \in H$. Hence,
+$K$ is closed.
+
+(ii) Let $e$ denote the identity of $G$. We need to show $e \in K$.
+Observe $e^p=e$ for all integer $p>0$. Choosing $p=1$, we have $e^1 \in H$.
+Hence, $e \in K$.
+
+(iii) We need to show $x^{-1} \in K$. In other words, we need to show
+$(x^{-1})^m \in H$ for some positive integer $m$.
+
+Since $x \in K$, we have $x^n \in H$ for some positive integer $n$. Then,
+$(x^n)^{-1} \in H$. Then, $(x^{-1})^n \in H$. Thus, $x^{-1} \in K$
+
+Therefore, $K$ is a subgroup of $G$.
+\end{proof}
+\end{document}

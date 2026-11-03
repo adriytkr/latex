@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage{amsmath,amsthm,amssymb}
+\newtheorem{problem}{Problem}
+\begin{document}
+\begin{problem}
+Let $D$ denote the set of all differentiable functions on $\mathbb{R}$.
+Let $G=\langle D,+ \rangle$ where $+$ denotes the usual addition.
+Let $H=\{f \in D \mid \frac{df}{dx} \text{ is constant}\}$.
+Prove that $H$ is a subgroup of $G$.
+\end{problem}
+\begin{proof}
+Let $f,g \in H$. Then, $\frac{df}{dx}=c_f$ for some constant $c_f$. Then,
+by integrating both sides, we obtain
+\begin{align*}
+\int \frac{df}{dx}&=\int c_f\\
+f(x)&=c_fx+k_f
+\end{align*}
+where $k_f$ is a constant.
+
+Similarly, $g(x)=c_g(x)+k_g$ where $k_g$ is a constant.
+
+Observe that
+\begin{align*}
+(f+g)(x)&=(c_fx+k_f)+(c_gx+k_g)\\
+&=(c_f+c_g)x+(k_f+k_g)
+\end{align*}
+
+By differentiating both sides, we obtain
+\begin{equation*}
+\frac{d}{dx}(f+g)(x)=c_f+c_g
+\end{equation*}
+
+Since $c_f+c_g$ is a constant, $f+g \in H$. Hence, $H$ is closed under addition.
+
+Notice that $0 \in H$ since $\frac{d}{dx}0=0$. Then, $f+0=0+f=f$.
+Thus, $H$ has an identity.
+
+Furthermore, note that $-f(x)=-c_fx-k_f$, and $\frac{d}{dx}{[-f(x)]}=-c_f$.
+Hence, since $-c_f$ is a constant, we have $-f \in H$.
+
+Now,
+\begin{align*}
+f(x)+(-f(x))&=(c_fx+k_f)+(-c_fx-k_f)\\
+&=(c_f-c_f)x+(k_f-k_f)\\
+&=0
+\end{align*}
+
+Because $0$ is the identity of $H$ and there exists another function,
+namely $-f$, such that $f+(-f)=0$, it follows that $f$ has an inverse.
+
+Therefore, $H$ is a subgroup of $G$.
+\end{proof}
+\end{document}
