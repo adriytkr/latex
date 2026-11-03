@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{amsthm,amsmath,amssymb,enumitem}
+\newtheorem{problem}{Problem}
+\newcommand{\Z}{\mathbb{Z}}
+\begin{document}
+\begin{problem}
+Define sets $A$ and $B$ as follows:
+\begin{align*}
+A&=\{m \in \Z \mid m=6r+12 \text{ for some } r \in \Z\}\\
+B&=\{n \in \Z \mid n=3s \text{ for some } s \in \Z\}\\
+\end{align*}
+
+\begin{enumerate}[label=(\alph*)]
+\item Prove that $A \subseteq B$.
+\item Disprove that $B \subseteq A$.
+\end{enumerate}
+\end{problem}
+\textbf{Solution}
+\begin{enumerate}[label=(\alph*)]
+\item Let $x \in A$. Then $x=6r+12$ for some integer $r$.
+Observe that
+\begin{align*}
+x&=6r+12\\
+&=3(2r+4)
+\end{align*}
+
+Let $s=2r+4$. Then, $x=3s$. Hence, $x \in B$, and $A \subseteq B$.
+\item Let $x \in B$. We shall prove $x \notin A$ for some cases. We have $x=3s$
+for some integer $s$. For $x$ to be in $A$, we would need an integer $r$ such that
+$x=6r+12$. Then,
+\begin{align*}
+3s&=6r+12\\
+s&=2r+4
+\end{align*}
+
+For $r=1$, $s=6$, and for $r=2$, $s=8$. Hence, by choosing $s=7$, we have
+$r=\frac32$ which is not an integer. Therefore, $x \notin A$ for particular cases;
+hence, $B \nsubseteq A$.
+\end{enumerate}
+\end{document}
